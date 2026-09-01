@@ -27,30 +27,37 @@ ai-fullstack-app/
 ├── .gitignore           # Ignorierte Dateien (venv, Cache, Datenbanken)
 ├── requirements.txt     # Projektabhängigkeiten
 └── README.md            # Projektdokumentation
+```
 
 # ⚙️ Installation & Lokale Ausführung
+
 ## 1. Repository klonen und virtuelle Umgebung aktivieren
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\activate
+```
 
 ## 2. Abhängigkeiten installieren
 ```powershell
 pip install -r requirements.txt
+```
 
 ## 3. Backend starten (FastAPI)
 Öffnen Sie ein Terminal und starten Sie den Uvicorn-Server mit Auto-Reload:
 ```powershell
 uvicorn backend.main:app --reload
+```
 
 ## 4. Frontend starten (Streamlit)
 Öffnen Sie ein zweites Terminal, aktivieren Sie die Umgebung und starten Sie das Dashboard:
 ```powershell
 .\venv\Scripts\activate
 streamlit run frontend/app.py
+``` 
 
-#🔌 API-Endpunkte
+# 🔌  API-Endpunkte
+
 GET /: Statusprüfung des Backends.
 
 POST /api/v1/analyze: Nimmt numerische Rohdaten und einen Schwellenwert entgegen, berechnet statistische Kernmetriken (Mittelwert, Standardabweichung, Min/Max) und identifiziert Anomalien.
